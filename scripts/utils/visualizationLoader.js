@@ -1,5 +1,13 @@
-export async function loadCesiumData() {
-  const viewer = new Cesium.Viewer('cesiumContainer');
+export async function loadVisualizationData() {
+  const viewer = new Cesium.Viewer('visualization', {
+    toolbar: false,
+    animation: false,
+    timeline: false,
+    fullscreenButton: false,
+    geocoder: false,
+    homeButton: false,
+    sceneModePicker: false,
+  });
 
   const response = await fetch('./data/points.json');
   const jsonData = await response.json();
@@ -15,8 +23,8 @@ export async function loadCesiumData() {
 
     viewer.entities.add({
       position: position,
-      point: {
-        pixelSize: 10,
+      billboard: {
+        image: "../../assets/point.svg",
         color: randomColor
       },
       label: {

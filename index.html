@@ -11,13 +11,16 @@
   <link href="https://cesium.com/downloads/cesiumjs/releases/1.108/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body>
+<body class="page">
   <nav class="navigation">
-    <button id="visualizationButton" class="navigation__button">План-график</button>
-    <button id="cesiumButton" class="navigation__button">Зd-модель</button>
+    <img class="navigation__logo" src="./assets/logo.svg" alt="logo" />
+    <button id="visualizationButton" class="navigation__button">Визуализация</button>
+    <button id="timelineButton" class="navigation__button">План-график</button>
   </nav>
-  <div id="visualization"></div>
-  <div id="cesiumContainer"></div>
+  <main class="content">
+    <div id="visualization"></div>
+    <div id="timeline"></div>
+  </main>
   <script type="module" src="./scripts/index.js"></script>
 </body>
 </html>

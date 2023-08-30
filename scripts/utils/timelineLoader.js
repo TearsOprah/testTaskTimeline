@@ -1,7 +1,7 @@
 import { convertDate } from './dateConverter.js';
 
-export async function loadVisualizationData() {
-  const container = document.getElementById('visualization');
+export async function loadTimelineData() {
+  const container = document.getElementById('timeline');
 
   try {
     const response = await fetch('data/shoot.json');
@@ -14,7 +14,8 @@ export async function loadVisualizationData() {
         id: event.id,
         content: `${event.satellite} point ${event.point}`,
         start: start,
-        end: end
+        end: end,
+        className: 'custom-event'
       };
     });
 
