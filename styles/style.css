@@ -1,8 +1,10 @@
 #visualization {
   width: 100%;
+  display: none;
 }
 
 #cesiumContainer {
   height: 1000px;
   width: 100%;
+  display: none;
 }
