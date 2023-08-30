@@ -8,3 +8,33 @@
   width: 100%;
   display: none;
 }
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.navigation__button {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #97b0f8;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navigation__button:hover {
+  background-color: #7c9afc;
+  transform: scale(1.05);
+}
+
+.navigation__button:focus {
+  outline: none;
+}
