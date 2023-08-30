@@ -3,5 +3,5 @@ export function convertDate(dateString) {
   const [day, month, year] = datePart.split('.');
   const [hours, minutes, seconds] = timePart.split(':');
 
-  return `20${year}-${month}-${day}:${hours}:${minutes}:${seconds}`;
+  return `20${year}-${month}-${day}T${hours}:${minutes}:${seconds}`;
 }
